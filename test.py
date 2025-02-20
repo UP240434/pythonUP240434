@@ -1,7 +1,11 @@
+#Program 1
+#Declare your age as integer variable
+Edad = int(input("Ingresa tu edad: "))
+print ("Tu edad es:", " ",Edad) 
+print(type(int(Edad)))
 
-
-
-
+#Program 2
+#Declare your height as a float variable
 
 
 
