@@ -1,5 +1,11 @@
 
 
+
+
+
+
+
+
 #Program 4
 #Wrote a script that pro,pts the user to emter base amd height
 #Of the triangle and calculate an area of this triamgle.
@@ -46,3 +52,18 @@ print("La circunferencia del circulo es:"," ",c)
 # Calculate the slope, 
 # x-intercept 
 # and y-intercept of y = 2x -2
+x= float(input("Ingresa el valor de x: "))
+y = 2 * x - 2
+print("El valor de y es:"," ",y)
+
+#Program 9
+# Slope is (m = y2-y1/x2-x1).
+# Find the slope and Euclidean distance between point (2, 2) 
+# and point (6,10)
+x1 = 2
+x2 = 6
+y1 = 2
+y2 = 10
+m = (y2 - y1)/(x2-x1)
+print("El valor de m es:"," ",m)
+
