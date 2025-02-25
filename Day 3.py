@@ -1,3 +1,4 @@
+
 #Program 1
 #Declare your age as integer variable
 Edad = int(input("Ingresa tu edad: "))
@@ -6,13 +7,18 @@ print(type(int(Edad)))
 
 #Program 2
 #Declare your height as a float variable
+Edad = float(input("Ingresa tu edad: "))
+print ("Tu edad es:", " ",Edad) 
+print(type(float(Edad)))
 
-
-
+#Program 3
+#Declare a variable that store a complex number
+complex = float(input("Ingresa tu numero: "))
+print('Complex number: ', 1 + 1j)
 
 #Program 4
-#Wrote a script that pro,pts the user to emter base amd height
-#Of the triangle and calculate an area of this triamgle.
+#Wrote a script that prompts the user to enter base and height
+#Of the triangle and calculate an area of this triangle.
 # (area = 0.5 x b x h)
 base = float (input("Ingresa el valor de la base: "))
 altura = float (input ("Ingresa el valor de la altura: "))
@@ -39,7 +45,6 @@ area = (lenght * width)
 perimeter = (lenght + width)
 print("El area del rectangulo es:"," ",area)
 print("El perimetro del rectangulo es:"," ",perimeter)
-
 
 #Program 7
 #Get radius of a circle using prompt. 
@@ -71,3 +76,51 @@ y2 = 10
 m = (y2 - y1)/(x2-x1)
 print("El valor de m es:"," ",m)
 
+#Program 10
+#Compare the slopes in tasks 8 and 9.
+
+
+
+
+
+#Program 11
+#Calculate the value of y (y = x^2 + 6x + 9). Try to use different x values and figure out at what x value y is going to be 0.
+x= float(input("Ingresa el valor de x: "))
+y =( (x**2)+(6*x)+9)
+print ("El valor de y es:", " ",y) 
+if y == 0:
+    print("y es igual 0.")
+else:
+    print("y no es igual a 0.")
+
+
+
+#Program 12
+#Find the length of 'python' and 'dragon' and make a falsy comparison statement.
+
+#Program 13
+#Use and operator to check if 'on' is found in both 'python' and 'dragon'
+
+#Program 14
+#I hope this course is not full of jargon. Use in operator to check if jargon is in the sentence.
+
+#Program 15
+#There is no 'on' in both dragon and python
+
+#Program 16
+#Find the length of the text python and convert the value to float and convert it to string
+
+#Program 17
+#Even numbers are divisible by 2 and the remainder is zero. How do you check if a number is even or not using python?
+
+#Program 18
+#Check if the floor division of 7 by 3 is equal to the int converted value of 2.7.
+
+#Program 19
+#Check if type of '10' is equal to type of 10
+
+#Program 20
+#Check if int('9.8') is equal to 10
+
+#Program 21
+#Writ a script that prompts the user to enter hours and rate per hour. Calculate pay of the person?
