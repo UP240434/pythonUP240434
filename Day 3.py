@@ -1,11 +1,9 @@
 
-#Program 12
-#Find the length of 'python' and 'dragon' and make a falsy comparison statement.
+#Program 13
+#Use and operator to check if 'on' is found in both 'python' and 'dragon'
 pyhton = ("python")
 dragon = ("dragon")
-len (pyhton)
-len (dragon)
-print(len('python') > len('dragon'))   # False
+print ("on in python and dragon", "on" in "python and dragon"" ")
 
 
 #Program 1
@@ -102,12 +100,20 @@ if y == 0:
 else:
     print("y no es igual a 0.")
 
-
-
-
+#Program 12
+#Find the length of 'python' and 'dragon' and make a falsy comparison statement.
+pyhton = ("python")
+dragon = ("dragon")
+print (len (pyhton))
+print (len (dragon))
+print(len('python') > len('dragon'))   # False
 
 #Program 13
 #Use and operator to check if 'on' is found in both 'python' and 'dragon'
+pyhton = ("python")
+dragon = ("dragon")
+print ("on in python and dragon", "on" in "python and dragon"" ")
+
 
 #Program 14
 #I hope this course is not full of jargon. Use in operator to check if jargon is in the sentence.
