@@ -1,4 +1,13 @@
 
+#Program 12
+#Find the length of 'python' and 'dragon' and make a falsy comparison statement.
+pyhton = ("python")
+dragon = ("dragon")
+len (pyhton)
+len (dragon)
+print(len('python') > len('dragon'))   # False
+
+
 #Program 1
 #Declare your age as integer variable
 Edad = int(input("Ingresa tu edad: "))
@@ -95,8 +104,7 @@ else:
 
 
 
-#Program 12
-#Find the length of 'python' and 'dragon' and make a falsy comparison statement.
+
 
 #Program 13
 #Use and operator to check if 'on' is found in both 'python' and 'dragon'
