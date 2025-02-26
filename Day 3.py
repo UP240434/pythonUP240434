@@ -1,11 +1,4 @@
 
-#Program 13
-#Use and operator to check if 'on' is found in both 'python' and 'dragon'
-pyhton = ("python")
-dragon = ("dragon")
-print ("on in python and dragon", "on" in "python and dragon"" ")
-
-
 #Program 1
 #Declare your age as integer variable
 Edad = int(input("Ingresa tu edad: "))
@@ -112,17 +105,26 @@ print(len('python') > len('dragon'))   # False
 #Use and operator to check if 'on' is found in both 'python' and 'dragon'
 pyhton = ("python")
 dragon = ("dragon")
-print ("on in python and dragon", "on" in "python and dragon"" ")
-
+print ("on in python and dragon", "on" in "python and dragon"," ")
 
 #Program 14
 #I hope this course is not full of jargon. Use in operator to check if jargon is in the sentence.
+print ("jargon in I hope this course us not full of jargon", "jargon" in "I hope this course us not full of jargon"," ")
 
 #Program 15
 #There is no 'on' in both dragon and python
+print ("On in python ", "On" in "python "," ")
+print ("On in dragon ", "On" in "dragon"," ")
 
 #Program 16
-#Find the length of the text python and convert the value to float and convert it to string
+#Find the length of the text python and convert the value to float 
+# and convert it to string
+pyhton = ("python")
+longTexto = len(pyhton)
+print (longTexto)
+floatLong = float (longTexto)
+strlong = str (floatLong)
+print (type(strlong))
 
 #Program 17
 #Even numbers are divisible by 2 and the remainder is zero. How do you check if a number is even or not using python?
