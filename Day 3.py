@@ -1,4 +1,3 @@
-
 #Program 1
 #Declare your age as integer variable
 Edad = int(input("Ingresa tu edad: "))
