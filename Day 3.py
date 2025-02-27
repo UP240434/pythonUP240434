@@ -1,12 +1,3 @@
-x= int(input("Ingresa el valor de x: "))
-xf = x/2
-print ("El valor de x es:", " ",x) 
-if x == int:
-    print("x es igual 0.")
-else:
-    x= 0 
-    print (x)
-
 
 #Program 1
 #Declare your age as integer variable
@@ -137,6 +128,12 @@ print (type(strlong))
 
 #Program 17
 #Even numbers are divisible by 2 and the remainder is zero. How do you check if a number is even or not using python?
+x= int(input("Ingresa el valor de x: "))
+print (x)
+if (x%2==0):
+    print("x es par.")
+else:
+    print('x es impar.')
 
 #Program 18
 #Check if the floor division of 7 by 3 is equal to the int converted value of 2.7.
