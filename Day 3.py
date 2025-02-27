@@ -1,3 +1,13 @@
+x= int(input("Ingresa el valor de x: "))
+xf = x/2
+print ("El valor de x es:", " ",x) 
+if x == int:
+    print("x es igual 0.")
+else:
+    x= 0 
+    print (x)
+
+
 #Program 1
 #Declare your age as integer variable
 Edad = int(input("Ingresa tu edad: "))
