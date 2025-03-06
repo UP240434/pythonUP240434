@@ -100,22 +100,44 @@ print(C.split()) # ['thirty', 'days', 'of', 'python']
 #"Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" split the string at the comma.
 print("           ")
 print("Programa 14.")
+C = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'
+print(C.split(',')) 
 
 #What is the character at index 0 in the string Coding For All.
 print("           ")
 print("Programa 15.")
+language = 'Coding for All'
+first_letter = language[0]
+print(first_letter)
 
 #What is the last index of the string Coding For All.
 print("           ")
 print("Programa 16.")
+language = 'Coding for ALL'
+last_index = len(language) - 1
+last_letter = language[last_index]
+print(last_letter)
 
 #What character is at index 10 in "Coding For All" string.
 print("           ")
 print("Programa 17.")
+language = 'Coding for All'
+ten = language[10]
+print(ten)
+
 
 #Create an acronym or an abbreviation for the name 'Python For Everyone'.
 print("           ")
 print("Programa 18.")
+language = 'Python for Everyone'
+first_three = language[0:3] # starts at zero index and up to 3 but not include 3
+print(first_three) #Pyt
+last_three = language[9:9]
+print(last_three)
+last_three2 = language[10:12]
+print(last_three2)
+
+
 
 #Create an acronym or an abbreviation for the name 'Coding For All'.
 print("           ")
