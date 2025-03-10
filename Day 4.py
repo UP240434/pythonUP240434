@@ -74,7 +74,7 @@ print (company[7:11] + company [11:15])
 print("           ")
 print("Programa 10.")
 f = 'Coding For All'
-print(f.find('Coding'))  # 1-6
+print(f.find('Coding'))  
 
 #Replace the word coding in the string 'Coding For All' to Python.
 print("           ")
@@ -129,93 +129,144 @@ print(ten)
 #Create an acronym or an abbreviation for the name 'Python For Everyone'.
 print("           ")
 print("Programa 18.")
-language = 'Python for Everyone'
-first_three = language[0:3] # starts at zero index and up to 3 but not include 3
-print(first_three) #Pyt
-last_three = language[9:9]
-print(last_three)
-last_three2 = language[10:12]
-print(last_three2)
-
+language = 'Python For Everyone'
+first_word = language[0:3] 
+m_word= language[7:8]
+last_three = language[10:12]
+print(first_word, m_word, last_three)
 
 
 #Create an acronym or an abbreviation for the name 'Coding For All'.
 print("           ")
 print("Programa 19.")
+language = 'Python For All'
+first_word = language[0:3] 
+m_word= language[7:8]
+last_three = language[10:12]
+print(first_word, m_word, last_three)
+
+
 
 #Use index to determine the position of the first occurrence of C in Coding For All.
 print("           ")
 print("Programa 20.")
+f = 'Coding For All'
+print(f.find('C'))  
 
 #Use index to determine the position of the first occurrence of F in Coding For All.
 print("           ")
 print("Programa 21.")
+f = 'Coding For All'
+print(f.find('F'))  
 
 #Use rfind to determine the position of the last occurrence of l in Coding For All People.
 print("           ")
 print("Programa 22.")
+u = 'Coding for All'
+print(u.rfind('l')) 
 
 #Use index or find to find the position of the first occurrence of the word 'because' in the following sentence: 
 #'You cannot end a sentence with because because because is a conjunction'
 print("           ")
 print("Programa 23.")
+f = 'You cannot end a sentence with because because because is a conjunction'
+print(f.find('because'))  
 
 #Use rindex to find the position of the last occurrence of the word because in the following sentence: 
 #'You cannot end a sentence with because because because is a conjunction'
 print("           ")
 print("Programa 24.")
+ur = 'You cannot end a sentence with because because because is a conjunction'
+sub_string = 'because'
+print(ur.rindex(sub_string,))  #En este marca error si pones un numero incorrecto para comproar donde esta una palabra.
 
 #Slice out the phrase 'because because because' in the following sentence: 
 # 'You cannot end a sentence with because because because is a conjunction'
 print("           ")
 print("Programa 25.")
+eliminate = ' You cannot end a sentence with because because because is a conjunction'
+print (eliminate[0:31] + eliminate[-17:])
 
 #Find the position of the first occurrence of the word 'because' in the following sentence: 
 #'You cannot end a sentence with because because because is a conjunction'
 print("           ")
 print("Programa 26.")
+f = 'You cannot end a sentence with because because because is a conjunction'
+print(f.find('because'))  
 
 #Slice out the phrase 'because because because' in the following sentence:
 # 'You cannot end a sentence with because because because is a conjunction'
 print("           ")
 print("Programa 27.")
+eliminate = ' You cannot end a sentence with because because because is a conjunction'
+print (eliminate[0:31] + eliminate[-17:])
 
 #Does ''Coding For All' start with a substring Coding?
 print("           ")
 print("Programa 28.")
+inicia = 'Coding for All'
+print(inicia.startswith('Coding'))
 
-#¿'Coding For All' termina con una subcadena 'coding '?
+#Does 'Coding For All' end with a substring coding?
 print("           ")
 print("Programa 29.")
+termina = 'Coding for All'
+print(termina.endswith('Coding'))
 
 #'   Coding For All      '  , remove the left and right trailing spaces in the given string.
 print("           ")
 print("Programa 30.")
+inicio_y_final = '   Coding For All      '
+print(inicio_y_final.strip(' '))
 
 #Which one of the following variables return True when we use the method isidentifier():
 #30DaysOfPython
 #thirty_days_of_python
 print("           ")
 print("Programa 31.")
+cual_variable = '30DaysOfPython'
+print(cual_variable .isidentifier())
+es_valida = 'hirty_days_of_python'
+print(es_valida .isidentifier())
 
 #The following list contains the names of some of python libraries: ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon'].
 # Join the list with a hash with space string.
 print("           ")
 print("Programa 32.")
+libreria = ['Django', 'Flask', 'NumPy', 'Matplotlib','Pandas']
+formated_string = 'The following are python libraries:%s' % (libreria)
+print(formated_string)
+
 
 #Use the new line escape sequence to separate the following sentences.
 print("           ")
-print("Programa 33.")
+print("Programa 33.") 
+print('I am enjoying this challenge. \nI just wonder what is next')
 
 #Use a tab escape sequence to write the following lines.
 print("           ")
 print("Programa 34.")
+print('Name\t\tAge\tCountry\t\tCity')
+print('Asabeneh\t250\tFinland\t\tHelsinki')
 
 #Use the string formatting method to display the following:
 print("           ")
 print("Programa 35.")
+radio= 10
+pi = 3.14
+area = pi * radio ** 2
+fortmato= 'The area of a circle with a radius {} is {:.2f}.'.format(radio, area) 
+print(fortmato)
 
 #Make the following using string formatting methods:
 print("           ")
 print("Programa 36.")
-
+a = 8
+b = 6
+print(f'{a} + {b} = {a +b}')
+print(f'{a} - {b} = {a - b}')
+print(f'{a} * {b} = {a * b}')
+print(f'{a} / {b} = {a / b:.2f}')
+print(f'{a} % {b} = {a % b}')
+print(f'{a} // {b} = {a // b}')
+print(f'{a} ** {b} = {a ** b}')
