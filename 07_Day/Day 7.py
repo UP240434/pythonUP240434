@@ -59,7 +59,6 @@ a = {19, 22, 24, 20, 25, 26}
 b = {19, 22, 20, 25, 26, 24, 28, 27}
 print(a.issubset(b))
 
-
 #Are A and B disjoint sets
 print("           ")
 print('Programa 2.4')
@@ -75,8 +74,6 @@ b = {19, 22, 20, 25, 26, 24, 28, 27}
 print(a.union(b))
 print("           ")
 print(b.union(a))
-
-
 
 #What is the symmetric difference between A and B
 print("           ")
