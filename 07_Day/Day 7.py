@@ -121,17 +121,18 @@ print('Programa 3.2')
 print('Cualquier tipo de datos escrito como texto es una cadena. Cualquier dato entre comillas simples, dobles o triples es una cadena.')
 print("           ")
 print('Una lista es una colección de distintos tipos de datos que está ordenada y es modificable '
-'. Una lista puede estar vacía o puede tener elementos de distintos tipos de datos. Ademas se anota entre corchetes, comillas y comas')
+'. Una lista puede estar vacía o puede tener elementos de distintos tipos de datos. Ademas se anota entre corchetes [], comillas y comas')
 print("           ")
 print("Una tupla es una colección de diferentes tipos de datos que está ordenada y no se puede cambiar (inmutable). Las tuplas se escriben entre corchetes, (), comillas y comas.")
 print("           ")
 print('Un conjunto es una colección de elementos distintos no ordenados y no indexados.'
-' En Python, un conjunto se usa para almacenar elementos únicos y es posible encontrar la unión. Se anota entre llaves, comillas y comas.')
+' En Python, un conjunto se usa para almacenar elementos únicos y es posible encontrar la unión. Se anota entre llaves {}, comillas y comas.')
 print("           ")
 
 #I am a teacher and I love to inspire and teach people. How many unique words have been used in the sentence? 
 # Use the split methods and set to get the unique words.
-
+print("           ")
+print('Programa 3.3')
 list = ['I', 'am', 'a', 'teacher', 'and', 'I', 'love', 'to', 'inspire', 'and' ,'teach', 'people']
 print(list)
 lenlist = len(list)
