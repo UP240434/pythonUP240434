@@ -1,5 +1,4 @@
 
-
 #Create an empty dictionary called dog
 print("           ")
 print('Programa 1')
@@ -41,28 +40,50 @@ print(len(student))
 
 #Get the value of skills and check the data type, it should be a list
 print("           ")
-print('Programa 5')
+Habil= (student.get('Habilidades'))
+lista = list(Habil)
+print (lista)
+print(type(lista))
+
 
 #Modify the skills values by adding one or two skills
 print("           ")
 print('Programa 6')
+student['Habilidades'].append('Social, Organizado')
+print(student)
 
 #Get the dictionary keys as a list
 print("           ")
 print('Programa 7')
+keys = student.keys()
+print(keys) 
+lista = list(keys)
+print (lista)
+print(type(lista))
 
 #Get the dictionary values as a list
 print("           ")
 print('Programa 8')
+values = student.values()
+print(values)  
+lista = list(values)
+print (lista)
+print(type(lista))
 
 #Change the dictionary to a list of tuples using items() method
 print("           ")
 print('Programa 9')
+tupla = student.items()
+print(tupla)
+print(type(tupla))
 
 #Delete one of the items in the dictionary
 print("           ")
 print('Programa 10')
+student.popitem() 
+print(student)
 
 #Delete one of the dictionaries
 print("           ")
 print('Programa 11')
+del student
