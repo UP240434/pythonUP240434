@@ -1,3 +1,26 @@
+person={
+    'first_name': 'Asabeneh',
+    'last_name': 'Yetayeh',
+    'age': 250,
+    'country': 'Finland',
+    'is_marred': True,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
+    }
+    }
+comprobacion = ('skills' in person)
+comprobacion2 = (person['skills'][4])
+print(comprobacion2)
+print ("Python" in comprobacion2)
+if comprobacion== True:
+     print(person['skills'][2])
+if "Python" in person['skills']:
+     print("yes")
+
+
+
 
 
 # Ejercicios: Nivel 1
@@ -139,13 +162,13 @@ person={
     }
     }
 comprobacion = ('skills' in person)
+values = person.values()
+comprobacion2 = ('Python' in person)
+
 if comprobacion== True:
     if comprobacion== True:
      print(person['skills'][2])
-elif 
+elif comprobacion2 == True:
+     print(person['skills'][3])
 
 
-* Verificar si el diccionario de personas tiene la clave de habilidades; de ser así, imprimir la habilidad central en la lista de habilidades.
-* Verificar si el diccionario de personas tiene la clave de habilidades; de ser así, verificar si la persona tiene la habilidad "Python" e imprimir el resultado.
-* Si una persona solo tiene JavaScript y React, imprimir('Es desarrollador front-end'); si tiene Node, Python y MongoDB, imprimir('Es desarrollador back-end'); si tiene React, Node y MongoDB, imprimir('Es desarrollador full-stack'); de lo contrario, imprimir('Título desconocido'). Para obtener resultados más precisos, se pueden anidar más condiciones.
-* Si la persona está casada y reside en Finlandia, imprimir la información en el siguiente formato:
