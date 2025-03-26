@@ -1,9 +1,3 @@
-def generate_groups (team,*args):
-    print(team)
-    for i in args:
-        print(i)
-print(generate_groups('Team-1','Asabeneh','Brook','David','Eyob'))
-#Ejercicios: Nivel 1
 
 #Declare la función add_two_numbers . Esta función acepta dos parámetros y devuelve una suma.
 print("           ")
@@ -28,12 +22,11 @@ print(area_of_circle(10))
 # De no ser así, proporcione una respuesta razonable.
 print("           ")
 print('Programa 3')
-def sum_all_nums(*nums):
-    total = 0
-    for num in nums:
-        total += num    
-    return total
-print(sum_all_nums(2, 3, 5)) 
+def sum_all_nums():
+    m = [1,2,3,4,5]
+    n = sum(m,0)
+    print(n)
+sum_all_nums()
 
 #La temperatura en °C se puede convertir a °F usando esta fórmula: °F = (°C x 9/5) + 32. Escriba una función que convierta °C a °F, convert_celsius_to-fahrenheit .
 print("           ")
@@ -47,48 +40,96 @@ add_Celsius()
 #Escriba una función llamada check-season, toma un parámetro de mes y devuelve la temporada: Otoño, Invierno, Primavera o Verano.
 print("           ")
 print('Programa 5')
-def check_season (Otono == 'Septiembre' or 'Octubre' or 'Diciembre')
-    age = "Septiembre"
-    return age
-print('Estacion: ', check_season (Otono == 'Septiembre' or 'Octubre' or 'Diciembre'))
+
 
     
 #Escriba una función llamada calculate_slope que devuelva la pendiente de una ecuación lineal
 print("           ")
 print('Programa 6')
 
+
 #La ecuación cuadrática se calcula de la siguiente manera: ax² + bx + c = 0. Escriba una función que calcule el conjunto solución de una ecuación cuadrática,
 # solve_quadratic_eqn .
 print("           ")
 print('Programa 7')
+def solve_quadratic_eqn  (r):
+    PI = 3.14
+    area = PI * r ** 2
+    return area
+print(area_of_circle(10))
+
 
 #Declara una función llamada print_list. Esta toma una lista como parámetro e imprime cada elemento de la lista.4print("           ")
 print("           ")
 print('Programa 8')
+def reverse_list():
+    fruits = ['1', '2', '3', '4']      
+    for fruit in fruits:
+     print(fruit)
+(reverse_list())
+
+
+
 
 #Declare una función llamada reverse_list. Esta recibe un array como parámetro y devuelve su valor inverso (usando bucles).
 print("           ")
 print('Programa 9')
+def reverse_list():
+    fruits = ['1', '2', '3', '4']
+    fruits.reverse()        
+    for fruit in fruits:
+     print(fruit)
+(reverse_list())
 
 #Declare una función llamada capitalize_list_items. Esta toma una lista como parámetro y devuelve una lista de elementos en mayúsculas.
 print("           ")
 print('Programa 10')
+def capitalize_list_items(lista): 
+    listaMayus = []
+    for valor in lista:
+        listaMayus.append(valor.upper())
+   
+    return listaMayus
+
+fruits = ['banana ' ,'manzana ', 'uva ', 'zanahoria']
+frutasMayus = capitalize_list_items(fruits)
+print(frutasMayus)
+
 
 #Declara una función llamada add_item. Esta toma como parámetros una lista y un elemento. Devuelve una lista con el elemento añadido al final.
 print("           ")
 print('Programa 11')
+def add_item(lista): 
+    frutas.append('apple') 
+frutas= ['banana', 'orange', 'mango', 'lemon']
+add_item(frutas)   
+print(frutas)  
 
 #Declara una función llamada remove_item. Esta toma como parámetros una lista y un elemento. Devuelve una lista con el elemento eliminado.
 print("           ")
 print('Programa 12')
+def remove_item(lista): 
+    frutas.pop() 
+frutas= ['banana', 'orange', 'mango', 'lemon']
+remove_item(frutas)   
+print(frutas)
 
 #Declara una función llamada suma_de_números. Esta función toma un parámetro numérico y suma todos los números en ese rango.
 print("           ")
 print('Programa 13')
+def sum_of_numbers(n):
+    total = 0
+    for i in range(n):
+        
+        total += i
+    return total
+
+print(sum_of_numbers(68))
 
 #Declara una función llamada suma_de_impares. Esta función toma un parámetro numérico y suma todos los números impares en ese rango.
 print("           ")
 print('Programa 14')
+
 
 #Declara una función llamada suma_de_números_pares. Esta función toma un parámetro numérico y suma todos los números pares en ese rango.
 print("           ")

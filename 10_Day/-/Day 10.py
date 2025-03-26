@@ -113,7 +113,9 @@ print('Programa 3.1')
 import paises as p
 
 paises = p.countries
-
+for pais in paises:
+    if "land" in pais:
+        print(pais)
 
 
 #This is a fruit list, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop.
@@ -139,5 +141,5 @@ ciudades = p.ciudades
 acum = 0
 
 for ciudad in ciudades:
-    acum = ciudad['population'] + acum
+    acum = ciudad['languages'] + acum
 print ('Somos:', acum)
