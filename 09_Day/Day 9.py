@@ -1,27 +1,3 @@
-person={
-    'first_name': 'Asabeneh',
-    'last_name': 'Yetayeh',
-    'age': 250,
-    'country': 'Finland',
-    'is_marred': True,
-    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
-    'address': {
-        'street': 'Space street',
-        'zipcode': '02210'
-    }
-    }
-comprobacion = ('skills' in person)
-comprobacion2 = (person['skills'][4])
-print(comprobacion2)
-print ("Python" in comprobacion2)
-if comprobacion== True:
-     print(person['skills'][2])
-if "Python" in person['skills']:
-     print("yes")
-
-
-
-
 
 # Ejercicios: Nivel 1
 
@@ -147,8 +123,6 @@ elif does_exist == False:
 #  for more accurate results more conditions can be nested!
 
 #* If the person is married and if he lives in Finland, print the information in the following format:
-print("           ")
-print('Programa 3')
 person={
     'first_name': 'Asabeneh',
     'last_name': 'Yetayeh',
@@ -161,14 +135,22 @@ person={
         'zipcode': '02210'
     }
     }
+
+first= (person['first_name'])
+last = (person['last_name'])
+c = (person['country'])
 comprobacion = ('skills' in person)
-values = person.values()
-comprobacion2 = ('Python' in person)
-
 if comprobacion== True:
-    if comprobacion== True:
      print(person['skills'][2])
-elif comprobacion2 == True:
-     print(person['skills'][3])
-
-
+if 'Python' in person['skills']:
+     print ('yes ', 'Python')
+if 'JavaScript' and 'React' in person['skills']:
+     print ('He is a front end developer')
+if 'Node' and 'Python' and "MongoDB" in person['skills']:
+     print('He is a backend developer')
+if 'React' and  'Node' and 'MongoDB' in person['skills']:
+     print('He is a fullstack developer')
+else:
+     print('unknown title') 
+if person['is_marred'] == True and person['country'] == 'Finland':
+     print(first, last, 'lives in' , c , 'He is married')
