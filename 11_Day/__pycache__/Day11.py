@@ -1,4 +1,5 @@
 
+
 #Declare la función add_two_numbers . Esta función acepta dos parámetros y devuelve una suma.
 print("           ")
 print('Programa 1')
@@ -40,13 +41,30 @@ add_Celsius()
 #Escriba una función llamada check-season, toma un parámetro de mes y devuelve la temporada: Otoño, Invierno, Primavera o Verano.
 print("           ")
 print('Programa 5')
-
+def check_season(month):
+    month = str(input('Month:'))
+    if month in ["September", "October", "November"]:
+        print("Autumn")
+    if month in ["December", "January", "February"]:
+        print("Winter")
+    if month in ["March", "April", "May"]:
+        print("Spring")
+    if month in ["Jun", "July", "August"]:
+        print("Summer")
+check_season('mes')
 
     
 #Escriba una función llamada calculate_slope que devuelva la pendiente de una ecuación lineal
 print("           ")
 print('Programa 6')
-
+def calculate_slope(m):
+    x1 = 2
+    x2 = 6
+    y1 = 2
+    y2 = 10
+    m = (y2 - y1) / (x2 - x1)
+    return m
+print(calculate_slope('valor'))
 
 #La ecuación cuadrática se calcula de la siguiente manera: ax² + bx + c = 0. Escriba una función que calcule el conjunto solución de una ecuación cuadrática,
 # solve_quadratic_eqn .
@@ -67,8 +85,6 @@ def reverse_list():
     for fruit in fruits:
      print(fruit)
 (reverse_list())
-
-
 
 
 #Declare una función llamada reverse_list. Esta recibe un array como parámetro y devuelve su valor inverso (usando bucles).
@@ -120,39 +136,80 @@ print('Programa 13')
 def sum_of_numbers(n):
     total = 0
     for i in range(n):
-        
         total += i
     return total
-
-print(sum_of_numbers(68))
+print(sum_of_numbers(11))
 
 #Declara una función llamada suma_de_impares. Esta función toma un parámetro numérico y suma todos los números impares en ese rango.
 print("           ")
 print('Programa 14')
+def suma_de_impares(impar):
+    suma_de_impar_numeros = 0
+    for i in range(impar + 1):
+        if i % 2 == 1:
+            suma_de_impar_numeros += i
+    return suma_de_impar_numeros
+print(suma_de_impares(10))
 
 
 #Declara una función llamada suma_de_números_pares. Esta función toma un parámetro numérico y suma todos los números pares en ese rango.
 print("           ")
 print('Programa 15')
-
-
+def suma_de_numeros_pares(par):
+    suma_de_numeros_pares = 0
+    for i in range(par + 1):
+        if i % 2 == 0:
+            suma_de_numeros_pares += i
+    return suma_de_numeros_pares
+print(suma_de_numeros_pares(11))
 
 #Ejercicios: Nivel 2
 
 #Declare una función llamada evens_and_odds. Esta función toma un entero positivo como parámetro y cuenta el número de pares e impares en el número.
 print("           ")
 print('Programa 2.1')
+
+def evens_and_odds(entero):
+    impar = 0
+    par = 0
+    for i in range(entero + 1):
+        if i % 2 == 0:
+            par += i
+        else:
+            impar += i
+    print(impar, par)
+    print(i)
+(evens_and_odds(12345678910))
+
+
 #Llama a tu función factorial, toma un número entero como parámetro y devuelve un factorial del número.
 print("           ")
 print('Programa 2.2')
+def factorial(n):
+   if n==0 or n==1:
+            resultado=1
+   elif n>1:
+            resultado=n*factorial(n-1)
+   return resultado
+print(factorial(3))
+
+
 #Llama a tu función is_empty , toma un parámetro y verifica si está vacío o no
 print("           ")
 print('Programa 2.3')
+def is_empty(cadena):
+    cadena == ""
+    long = len(cadena)
+    if (long == 0):
+        print("La cadena esta vacía");
+    else:
+         print("La cadena no esta vacía");
+is_empty("")
+
 
 #Escriba diferentes funciones que acepten listas. Estas funciones deben calcular la media, la mediana, la moda, el rango, la varianza y la desviación estándar (desviación estándar).
 print("           ")
 print('Programa 2.4')
-
 
 
 
