@@ -1,4 +1,4 @@
-
+#Ejercicios Nivel 1
 
 #Declare la función add_two_numbers . Esta función acepta dos parámetros y devuelve una suma.
 print("           ")
@@ -169,17 +169,25 @@ print(suma_de_numeros_pares(11))
 print("           ")
 print('Programa 2.1')
 
-def evens_and_odds(entero):
-    impar = 0
-    par = 0
-    for i in range(entero + 1):
-        if i % 2 == 0:
-            par += i
+def evens_and_odds(n: int) -> tuple:
+    if n < 0:
+        raise ValueError("El número debe ser un entero positivo.")
+    
+    evens = 0
+    odds = 0
+    
+    while n > 0:
+        digit = n % 10
+        if digit % 2 == 0:
+            evens += 1
         else:
-            impar += i
-    print(impar, par)
-    print(i)
-(evens_and_odds(12345678910))
+            odds += 1
+        n //= 10
+    
+    return evens, odds
+n = 123456789
+evens, odds = evens_and_odds(n)
+print(f"The number of evens are : {evens}, The number of odds are : {odds}")
 
 
 #Llama a tu función factorial, toma un número entero como parámetro y devuelve un factorial del número.
@@ -210,25 +218,83 @@ is_empty("")
 #Escriba diferentes funciones que acepten listas. Estas funciones deben calcular la media, la mediana, la moda, el rango, la varianza y la desviación estándar (desviación estándar).
 print("           ")
 print('Programa 2.4')
+def mean(dataset):
+    return sum(dataset) / len(dataset)
+print(mean([1,2,3,4,5]))
 
+def median(dataset):
+    data = sorted(dataset)
+    index = len(data) // 2
 
+    if len(dataset) % 2 != 0:
+        return data[index]
+
+    return (data[index - 1] + data[index]) / 2
+print(median([1,2,3,4,5]))
+
+def mode(dataset):
+    frequency = {}
+
+    for value in dataset:
+        frequency[value] = frequency.get(value, 0) + 1
+
+    most_frequent = max(frequency.values())
+
+    modes = [key for key, value in frequency.items() if value == most_frequent]
+
+    return modes
+print(mode([1,2,3,4,5]))
+
+def variance(dataset):
+    n = len(dataset)
+    mean = sum(dataset) / n
+    deviations = [(x - mean) ** 2 for x in dataset]
+    variance = sum(deviations) / n
+    return variance
+print(variance([1,2,3,4,5]))
+
+def desv(dataset):
+    var = variance(dataset)
+    std_dev = var ** 0.5
+    return std_dev
+print(desv([1,2,3,4,5]))
 
 #Ejercicios: Nivel 3
 
 #Escriba una función llamada is_prime, que verifique si un número es primo.
 print("           ")
 print('Programa 3.1')
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+print(is_prime(7))
 
 #Escriba una función que verifique si todos los elementos son únicos en la lista.
 print("           ")
 print('Programa 3.2')
+def unico_list(unico_list):
+    return len(set(unico_list)) == len(unico_list)
+print(unico_list([1,2,3,4,5]))
+
 #Escriba una función que verifique si todos los elementos de la lista son del mismo tipo de datos.
 print("           ")
 print('Programa 3.3')
+def mismo_type(lista):
+    list = iter(lista)
+    first_type = type(next(list))
+    return first_type if all((type(x) is first_type) for x in list) else False
+print(mismo_type([1,2,3,4,5]))
+
 #Escriba una función que verifique si la variable proporcionada es una variable de Python válida
 print("           ")
 print('Programa 3.4')
+
 #Vaya a la carpeta de datos y acceda al archivo Countries-data.py.
+#Crea una función llamada "los idiomas más hablados del mundo". Debería devolver los 10 o 20 idiomas más hablados del mundo en orden descendente.
 ##Crea una función llamada "los países más poblados". Debería devolver los 10 o 20 países más poblados en orden descendente.
 print("           ")
 print('Programa 3.5')
