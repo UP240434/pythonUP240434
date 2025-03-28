@@ -2,10 +2,10 @@
 #Filtrar solo los negativos y ceros en la lista usando la comprensión de listas
 print("           ")
 print('Programa 1')
-def negative_list():
+def lista_negativa():
     numeros = [-4, -3, -2, -1, 0, 2, 4, 6]
     return [x for x in numeros if x <= 0]
-print(negative_list())
+print(lista_negativa())
 
 #Aplana la siguiente lista de listas de listas a una lista unidimensional:
 print("           ")
@@ -38,8 +38,8 @@ print("           ")
 print('Programa 5')
 def lista_a_diccionario():
     paises = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
-    paises = [[sub2[0].upper(), sub2[1].upper()] for sub in paises for sub2 in sub]
-    paises = [x for sub in paises for x in sub]
+    paises = [[num2[0].upper(), num2[1].upper()] for num in paises for num2 in num]
+    paises = [x for num in paises for x in num]
     llave = ["country", "city"]
     return [{llave[0]: paises[ciudad], llave[1]: paises[ciudad + 1]} for ciudad in range(0, len(paises), 2)]
 for diccionario in lista_a_diccionario():
