@@ -69,10 +69,10 @@ print(list_of_rgb_colors())
 #Escriba una función generate_colors que pueda generar cualquier cantidad de colores hexadecimales o rgb.
 print("           ")
 print('Programa 2.3')
-def generate_colors(type_of_color, algun):
-    if type_of_color == 'hexa':
+def generate_colors(tipo_of_color, algun):
+    if tipo_of_color == 'hexa':
         return list_of_hexa_colors(algun)
-    elif type_of_color == 'rgb':
+    elif tipo_of_color == 'rgb':
         return list_of_rgb_colors(algun)
     else:
         return "Invalid Input"
@@ -82,20 +82,20 @@ print(generate_colors('rgb',3))
 #Llama a tu función shuffle_list, toma una lista como parámetro y devuelve una lista aleatoria
 print("           ")
 print('Programa 3.1')
-def shuffled_list(array):
-    return random.sample(array, len(array))
+def shuffled_list(fruit):
+    return random.sample(fruit, len(fruit))
 print(shuffled_list(['banana', 'orange', 'mango', 'lemon']))
 
 #Escriba una función que devuelva un array de siete números aleatorios en un rango del 0 al 9. Todos los números deben ser únicos.
 print("           ")
 print('Programa 3.2')
 def seven_random():
-    arr = []
+    lista = []
     length = -1
     while length <= 7:
         num = random.randint(0, 9)
-        if num not in arr:
-            arr.append(num)
-            length = len(arr)
-    return arr
+        if num not in lista:
+            lista.append(num)
+            length = len(lista)
+    return lista
 print(seven_random())
