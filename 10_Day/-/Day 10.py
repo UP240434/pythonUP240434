@@ -13,9 +13,9 @@ else:
     print(count)
 
 print("           ")
-numbers = (0, 1, 2, 3, 4, 5,6,7,8,9, 10)
-for number in numbers:
-    print(number)
+numeros = (0, 1, 2, 3, 4, 5,6,7,8,9, 10)
+for numero in numeros:
+    print(numero)
 
 #Iterate 10 to 0 using for loop, do the same using while loop.
 print("           ")
@@ -28,9 +28,9 @@ else:
     print(count)
     
 print("           ")
-numbers = (10, 9, 8, 7, 6, 5,4,3,2,1,0)
-for number in numbers:
-    print(number)
+numeros = (10, 9, 8, 7, 6, 5,4,3,2,1,0)
+for numero in numeros:
+    print(numero)
 
 #Write a loop that 
 print("           ")
@@ -66,16 +66,16 @@ for program in programs: # number is temporary name to refer to the list's items
 #Use for loop to iterate from 0 to 100 and print only even numbers
 print("           ")
 print('Programa 7')
-for number in range(0,100,2):
-    print(number)
+for numero in range(0,100,2):
+    print(numero)
 else:
-    print(number + 2)
+    print(numero + 2)
 
 #Use for loop to iterate from 0 to 100 and print only odd numbers
 print("           ")
 print('Programa 8')
-for number in range(1,100,2):
-    print(number)
+for numero in range(1,100,2):
+    print(numero)
 
 
 

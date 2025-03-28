@@ -69,10 +69,10 @@ print(list_of_rgb_colors())
 #Escriba una función generate_colors que pueda generar cualquier cantidad de colores hexadecimales o rgb.
 print("           ")
 print('Programa 2.3')
-def generate_colors(tipo_of_color, algun):
-    if tipo_of_color == 'hexa':
+def generate_colors(tipo_de_color, algun):
+    if tipo_de_color == 'hexa':
         return list_of_hexa_colors(algun)
-    elif tipo_of_color == 'rgb':
+    elif tipo_de_color == 'rgb':
         return list_of_rgb_colors(algun)
     else:
         return "Invalid Input"
@@ -91,11 +91,11 @@ print("           ")
 print('Programa 3.2')
 def seven_random():
     lista = []
-    length = -1
-    while length <= 7:
+    largo = -1
+    while largo <= 7:
         num = random.randint(0, 9)
         if num not in lista:
             lista.append(num)
-            length = len(lista)
+            largo = len(lista)
     return lista
 print(seven_random())

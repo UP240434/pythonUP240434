@@ -23,33 +23,34 @@ print(area_of_circle(10))
 # De no ser así, proporcione una respuesta razonable.
 print("           ")
 print('Programa 3')
-def sum_all_nums():
+def add_all_nums():
     m = [1,2,3,4,5]
     n = sum(m,0)
     print(n)
-sum_all_nums()
+    print(type(n))
+add_all_nums()
 
 #La temperatura en °C se puede convertir a °F usando esta fórmula: °F = (°C x 9/5) + 32. Escriba una función que convierta °C a °F, convert_celsius_to-fahrenheit .
 print("           ")
 print('Programa 4')
-def add_Celsius ():
+def convert_celsius_to_fahrenheit ():
     c = 45
     total = (c * 9/5) + 32
     print(total, " Grados Farenheit")
-add_Celsius()
+convert_celsius_to_fahrenheit()
 
 #Escriba una función llamada check-season, toma un parámetro de mes y devuelve la temporada: Otoño, Invierno, Primavera o Verano.
 print("           ")
 print('Programa 5')
-def check_season(month):
-    month = str(input('Month:'))
-    if month in ["September", "October", "November"]:
+def check_season(mes):
+    mes = str(input('Month:'))
+    if mes in ["September", "October", "November"]:
         print("Autumn")
-    if month in ["December", "January", "February"]:
+    if mes in ["December", "January", "February"]:
         print("Winter")
-    if month in ["March", "April", "May"]:
+    if mes in ["March", "April", "May"]:
         print("Spring")
-    if month in ["Jun", "July", "August"]:
+    if mes in ["Jun", "July", "August"]:
         print("Summer")
 check_season('mes')
 
@@ -80,12 +81,12 @@ print(area_of_circle(10))
 #Declara una función llamada print_list. Esta toma una lista como parámetro e imprime cada elemento de la lista.4print("           ")
 print("           ")
 print('Programa 8')
-def reverse_list():
+def print_list():
     fruits = ['1', '2', '3', '4']      
     for fruit in fruits:
      print(fruit)
-(reverse_list())
 
+print(print_list())
 
 #Declare una función llamada reverse_list. Esta recibe un array como parámetro y devuelve su valor inverso (usando bucles).
 print("           ")
@@ -168,27 +169,23 @@ print(suma_de_numeros_pares(11))
 #Declare una función llamada evens_and_odds. Esta función toma un entero positivo como parámetro y cuenta el número de pares e impares en el número.
 print("           ")
 print('Programa 2.1')
-
-def evens_and_odds(n: int) -> tuple:
-    if n < 0:
-        raise ValueError("El número debe ser un entero positivo.")
-    
-    evens = 0
-    odds = 0
+def evens_and_odds(n: int) -> tuple[int, int]:
+    pares = 0
+    impares = 0
     
     while n > 0:
-        digit = n % 10
-        if digit % 2 == 0:
-            evens += 1
+        digito = n % 10  
+        if digito % 2 == 0:
+            pares += 1
         else:
-            odds += 1
-        n //= 10
+            impares += 1
+        n //= 10  
     
-    return evens, odds
-n = 123456789
-evens, odds = evens_and_odds(n)
-print(f"The number of evens are : {evens}, The number of odds are : {odds}")
+    return pares, impares
 
+par_cuenta, impar_cuenta = evens_and_odds(123456)
+print("Números pares:", par_cuenta)
+print("Números impares:", impar_cuenta)
 
 #Llama a tu función factorial, toma un número entero como parámetro y devuelve un factorial del número.
 print("           ")
