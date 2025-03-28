@@ -8,10 +8,32 @@
 #Explique la diferencia entre mapa, filtro y reducción.
 print("           ")
 print('Programa 1')
+print('La función map() es una función incorporada que toma una función y un iterable como parámetros.') 
+print('Lo que hace map es iterar sobre una lista. Por ejemplo, cambia los nombres a mayúsculas y devuelve una nueva lista con todos los elementos')
+print("           ")
+print('La función filter() llama a la función especificada, que devuelve un valor booleano para cada elemento del iterable (lista) especificado.')
+print('Filtra los elementos que cumplen los criterios de filtrado, imprimiendo solo ciertos elementos.')
+print("           ")
+print('La función reduce() se define en el módulo functools y debemos importarla desde este módulo. Al igual que map y filter, acepta dos parámetros: una función y un iterable.')
+print('Sin embargo, no devuelve otro iterable, sino un único valor, dando valores nuevos a los originales.')
 
 #Explique la diferencia entre función de orden superior, cierre y decorador.
 print("           ")
 print('Programa 2')
+print('Una función puede tomar una o más funciones como parámetros')
+print('Una función puede ser devuelta como resultado de otra función')
+print('Una función se puede modificar')
+print('Se puede asignar una función a una variable')
+
+print("           ")
+print('Python permite que una función anidada acceda al ámbito externo de la función que la encapsula. Esto se conoce como cierre.')
+print('Veamos cómo funcionan los cierres en Python. En Python, un cierre se crea anidando una función dentro de otra función que la encapsula y luego devolviendo la función interna. ')
+
+print("           ")
+print('Un decorador es un patrón de diseño en Python que permite al usuario añadir nuevas funciones a un objeto existente sin modificar su estructura.')
+print('Los decoradores suelen llamarse antes de la definición de la función que se desea decorar.')
+print('Para crear una función decoradora, necesitamos una función externa con una función contenedora interna.')
+print('La mayoría de las veces necesitamos que nuestras funciones tomen parámetros, por lo que es posible que necesitemos definir un decorador que acepte parámetros.')
 
 #Defina una función de llamada antes de map, filter o reduce, vea los ejemplos.
 print("           ")

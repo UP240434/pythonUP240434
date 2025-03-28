@@ -1,6 +1,7 @@
 
 # Ejercicios: Nivel 1
 
+
 #Get user input using input(“Enter your age: ”). 
 #If user is 18 or older, give feedback: You are old enough to drive. If below 18 give feedback to wait for the missing amount of years. Output:
 print("           ")
@@ -55,7 +56,10 @@ elif num1 < num2:
 
     
 
+
+
 # Ejercicios: Nivel 2
+
 
 #Write a code which gives grade to students according to theirs scores:
 print("           ")
