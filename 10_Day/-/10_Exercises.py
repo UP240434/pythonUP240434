@@ -111,12 +111,10 @@ print('La suma impar es:', suma)
 print("           ")
 print('Programa 3.1')
 import paises as p
-
-paises = p.countries
-for pais in paises:
-    if "land" in pais:
+paisess = p.countries
+for pais in paisess:
+    if 'land' in pais:
         print(pais)
-
 
 #This is a fruit list, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop.
 print("           ")
@@ -134,12 +132,28 @@ for fruit in fruits:
 #Find the 10 most populated countries in the world
 print("           ")
 print('Programa 3.3')
+import countries_data as cd
+countrieslist = cd.countries
+list_data = countrieslist
+total_languages_initial = []
+for i in list_data:
+    total_languages_initial.extend(i["languages"])
+print("Languages = ", len(set(total_languages_initial)))
+counts = {}
+for i in total_languages_initial:
+    counts[i] = counts.get(i, 0) + 1
 
-import countries as p
 
-ciudades = p.ciudades
-acum = 0
+def sort_dict_by_value(d, reverse=False):
+    return dict(sorted(d.items(), key=lambda x: x[1], reverse=reverse))
 
-for ciudad in ciudades:
-    acum = ciudad['languages'] + acum
-print ('Somos:', acum)
+
+counts = sort_dict_by_value(counts, True)
+for i in list(counts.items())[:10]:
+    print(i)
+populations = {}
+for i in list_data:
+    populations[i["name"]] = i["population"]
+populations = sort_dict_by_value(populations, True)
+for i in list(populations.items())[:10]:
+    print(i)

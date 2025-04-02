@@ -1,8 +1,7 @@
 import random
-
-chars = 'abcdefghijklmnopqrstuvwxyz1234567890'
-char_lista = []
-char_lista[:0] = chars
+letras = 'abcdefghijklmnopqrstuvwxyz1234567890'
+caracteres_lista = []
+caracteres_lista[:0] = letras
 
 #Ejercicios: Nivel 1
 
@@ -12,7 +11,7 @@ print('Programa 1')
 def random_user_id():
     genera = ''
     for _ in range(6):
-        genera += random.choice(char_lista)
+        genera += random.choice(caracteres_lista)
     return genera
 print(random_user_id())
 
@@ -21,10 +20,10 @@ print(random_user_id())
 print("           ")
 print('Programa 2')
 def user_id_gen_by_user():
-    charsize = int(input('Enter Character Size: '))
-    charid = int(input('Enter how many user ids to generate: '))
-    for _ in range(charid):
-        genera = ''.join([random.choice(char_lista) for _ in range(charsize)])
+    caracteres = int(input('Numero de Caracteres: '))
+    id = int(input('Numero de ID que generara: '))
+    for _ in range(id):
+        genera = ''.join([random.choice(caracteres_lista) for _ in range(caracteres)])
         print(genera)
 print(user_id_gen_by_user())
 
@@ -35,7 +34,7 @@ def rgb_color_gen():
     r = str(random.randint(0, 255))
     g = str(random.randint(0, 255))
     b = str(random.randint(0, 255))
-    return "rgb(" + r + "," + g + "," + b + ")"
+    return "(" + r + "," + g + "," + b + ")"
 print(rgb_color_gen())
 
 #Ejercicios: Nivel 2
@@ -48,10 +47,10 @@ def list_of_hexa_colors(algun =0):
     if algun == 0:
         algun = random.randint(1, 10)
     hexas = "1,2,3,4,5,6,7,8,9,0,a,b,c,d,e,f".split(",")
-    hexCodes = []
+    hexcodes = []
     for _ in range(algun):
-        hexCodes.append("#" + ''.join([random.choice(hexas) for _ in range(6)]))
-    return hexCodes
+        hexcodes.append("#" + ''.join([random.choice(hexas) for _ in range(6)]))
+    return hexcodes
 print(list_of_hexa_colors())
 
 #Escriba una función list_of_rgb_colors que devuelva cualquier número de colores RGB en una matriz.

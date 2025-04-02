@@ -1,8 +1,13 @@
+countries = ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
+names = ['Asabeneh', 'Lidiya', 'Ermias', 'Abraham']
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+from functools import reduce
+
+
+
 
 
 #Ejercicios: Nivel 1
-
-
 
 
 #Explique la diferencia entre mapa, filtro y reducción.
@@ -38,18 +43,39 @@ print('La mayoría de las veces necesitamos que nuestras funciones tomen paráme
 #Defina una función de llamada antes de map, filter o reduce, vea los ejemplos.
 print("           ")
 print('Programa 3')
+def mapa(num):
+    return num ** 3
+print(list(map(mapa, numbers)))
+
+def filtro(name):
+    if name[0] in 'AE':
+        return True
+    return False
+print(list(filter(filtro, names)))
+
+def suma_de_mapa(num1, num2):
+    return num1 + num2
+print(reduce(suma_de_mapa, list(map(mapa, numbers))))
+
 
 #Utilice el bucle for para imprimir cada país en la lista de países.
 print("           ")
 print('Programa 4')
+for i in countries:
+    print(i)
+
 
 #Utilice for para imprimir cada nombre en la lista de nombres.
 print("           ")
 print('Programa 5')
+for i in names:
+    print(i)
 
 #Utilice for para imprimir cada número en la lista de números.
 print("           ")
 print('Programa 6')
+for i in numbers:
+    print(i)
 
 
 
@@ -57,67 +83,133 @@ print('Programa 6')
 #Ejercicios: Nivel 2
 
 
-
 #Utilice el mapa para crear una nueva lista cambiando cada país a mayúscula en la lista de países
 print("           ")
 print('Programa 2.1')
+def upper(countries):
+    return countries.upper()
+print(list(map(upper, countries)))
+
 
 #Utilice el mapa para crear una nueva lista cambiando cada número por su cuadrado en la lista de números
 print("           ")
 print('Programa 2.2')
+def square(num):
+    return num ** 2
+print(list(map(square, numbers)))
 
 #Utilice el mapa para cambiar cada nombre a mayúsculas en la lista de nombres
 print("           ")
 print('Programa 2.3')
+print(list(map(upper, names)))
 
 #Utilice el filtro para filtrar los países que contienen la palabra "tierra".
 print("           ")
 print('Programa 2.4')
+def land(countries):
+    if 'land' in countries:
+        return True
+    return False
+print(list(filter(land, countries)))
 
 #Utilice el filtro para filtrar países que tengan exactamente seis caracteres.
 print("           ")
 print('Programa 2.5')
+def seis(countries):
+    if len(countries) == 6:
+        return True
+    return False
+print(list(filter(seis, countries)))
 
 #Utilice el filtro para filtrar los países que contengan seis letras o más en la lista de países.
 print("           ")
 print('Programa 2.6')
+def seis_o_mas(countries):
+    if len(countries) >= 6:
+        return True
+    return False
+print(list(filter(seis_o_mas, countries)))
 
 #Utilice el filtro para filtrar los países que comienzan con 'E'
 print("           ")
 print('Programa 2.7')
+def E(countries):
+    if countries[0] == 'E':
+        return True
+    return False
+print(list(filter(E, countries)))
 
 #Encadenar dos o más iteradores de lista (por ejemplo, arr.map(callback).filter(callback).reduce(callback))
 print("           ")
 print('Programa 2.8')
 
+
 #Declare una función llamada get_string_lists que toma una lista como parámetro y luego devuelve una lista que contiene solo elementos de cadena.
 print("           ")
 print('Programa 2.9')
+def string(string):
+    return str(string)
+
+def get_string_lists(cadena):
+    return list(map(string, cadena))
+print(get_string_lists(numbers))
+
 
 #Utilice reducir para sumar todos los números en la lista de números.
 print("           ")
 print('Programa 2.10')
+def suma(x, y):
+    return int(x) + int(y)
+print(reduce(suma, numbers))
 
 #Utilice reduce para concatenar todos los países y producir esta oración: Estonia, Finlandia, Suecia, Dinamarca, Noruega e Islandia son países del norte de Europa.
 print("           ")
 print('Programa 2.11')
+def concatenar_countries(x, y):
+    if x == "Estonia, Finland, Sweden, Denmark, Norway" and y == "Iceland":
+        return x + ", and " + y
+    else:
+        return x + ", " + y
+print(reduce(concatenar_countries, countries) + " are north European countries")
 
-#Declare una función llamada categorize_countries que devuelva una lista de países con algún patrón común (puede encontrar la lista de países en este repositorio como Countries.js (por ejemplo, 'land', 'ia', 'island', 'stan')).
+#Declare una función llamada categorize_countries que devuelva una lista de países con algún patrón común (puede encontrar la lista de países en este repositorio como Countries.js 
+#(por ejemplo, 'land', 'ia', 'island', 'stan')).
 print("           ")
 print('Programa 2.12')
+import paises as p
+paises = p.countries 
+print(list(filter(land, paises)))
 
-#Crea una función que devuelva un diccionario, donde las claves representan las letras iniciales de los países y los valores son la cantidad de nombres de países que comienzan con esa letra.
+
+
+#Crea una función que devuelva un diccionario, donde las claves representan las letras iniciales de los países y los valores son la cantidad de nombres de países que comienzan 
+#con esa letra.
 print("           ")
 print('Programa 2.13')
+keys = []
+keys = [i[0] for i in paises if i[0] not in keys]
+
+def contarcountry(contador):
+    return sum([True for i in paises if i[0].startswith(contador)])
+
+values = [contarcountry(l) for l in keys]
+
+print(dict(zip(keys, values)))
 
 #Declare una función get_first_ten_countries: devuelve una lista de los primeros diez países de la lista Countries.js en la carpeta de datos.
 print("           ")
 print('Programa 2.14')
+def get_first_ten_countries():
+    return paises[:10]
+print(get_first_ten_countries())
+
 
 #Declare una función get_last_ten_countries que devuelva los últimos diez países de la lista de países.
 print("           ")
 print('Programa 2.15')
-
+def get_last_ten_countries():
+    return paises[-1:-11:-1]
+print(get_last_ten_countries())
 
 
 
@@ -131,3 +223,6 @@ print('Programa 2.15')
 #Clasifique los diez países más poblados.
 print("           ")
 print('Programa 3.1')
+import countries as p
+data = p.ciudades
+
