@@ -138,7 +138,7 @@ list_data = countrieslist
 total_languages_initial = []
 for i in list_data:
     total_languages_initial.extend(i["languages"])
-print("Languages = ", len(set(total_languages_initial)))
+print("Total languages from the data = ", len(set(total_languages_initial)))
 counts = {}
 for i in total_languages_initial:
     counts[i] = counts.get(i, 0) + 1
@@ -146,11 +146,13 @@ for i in total_languages_initial:
 
 def sort_dict_by_value(d, reverse=False):
     return dict(sorted(d.items(), key=lambda x: x[1], reverse=reverse))
-
-
+print("           ")
+print('Ten most spoken lannguages in the world:')
 counts = sort_dict_by_value(counts, True)
 for i in list(counts.items())[:10]:
     print(i)
+print("           ")
+print('10 most populated countries in the world:')
 populations = {}
 for i in list_data:
     populations[i["name"]] = i["population"]
