@@ -41,8 +41,8 @@ print(dif)
 print("           ")
 print('Programa 5')
 today = date(year = 2021, month = 9, day = 20)
-jan_1970 = date(year = 1970, month = 1, day = 1)
-dif2 =-(today - jan_1970) 
+ene_1970 = date(year = 1970, month = 1, day = 1)
+dif2 =-(today - ene_1970) 
 print(dif2)
 
 #Piensa, ¿para qué puedes usar el módulo datetime? Ejemplos:
