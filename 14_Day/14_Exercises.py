@@ -224,31 +224,35 @@ print(get_last_ten_countries())
 print("           ")
 print('Programa 3.1')
 
-from countries_data import data
-from countries_data import data
+from countries_data import countries
 
 
-print(sorted(data, key=lambda x: x['name']))
-print(sorted(data, key=lambda x: x['capital']))
-print(sorted(data, key=lambda x: x['population']))
+paises_ordenados_por_nombre = sorted(countries, key=lambda x: x['name'])
 
-total_languages_initial = []
-for i in data:
-    total_languages_initial.extend(i["languages"])
-# noinspection DuplicatedCode
-counts = {}
-for i in total_languages_initial:
-    counts[i] = counts.get(i, 0) + 1
+paises_ordenados_por_capital = sorted(countries, key=lambda x: x.get('capital', ''))
+
+paises_ordenados_por_poblacion = sorted(countries, key=lambda x: x['population'], reverse=True)
 
 
-def sort_dict_by_value(d, reverse=False):
-    return dict(sorted(d.items(), key=lambda x: x[1], reverse=reverse))
+diez_mas_poblados = paises_ordenados_por_poblacion[:10]
 
 
-counts = sort_dict_by_value(counts, True)
-final_dict_1 = {}
-for i in list(counts.items())[:10]:
-    final_dict_1[list(i)[0]] = list(i)[1]
-print(sorted(final_dict_1))
+from collections import defaultdict
 
-print(list(sorted(data, key=lambda x: x['population'], reverse=True))[:10])
+language_count = defaultdict(int)
+for country in countries:
+    for language in country.get('languages', []):
+        language_count[language] += 1
+
+
+diez_mas_hablados = sorted(language_count.items(), key=lambda x: x[1], reverse=True)[:10]
+
+print("Países ordenados por nombre:", [country['name'] for country in paises_ordenados_por_nombre])
+print("                                                                                             ")
+print("Países ordenados por capital:", [country['name'] for country in paises_ordenados_por_capital])
+print("                                                                                             ")
+print("Países ordenados por población:", [(country['name'], country['population']) for country in paises_ordenados_por_poblacion])
+print("                                                                                             ")
+print("Diez idiomas más hablados por ubicación:", diez_mas_hablados )
+print("                                                                                             ")
+print("Diez países más poblados:", [(country['name'], country['population']) for country in diez_mas_poblados])
