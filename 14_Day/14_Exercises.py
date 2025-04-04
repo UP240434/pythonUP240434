@@ -228,12 +228,8 @@ from countries_data import countries
 
 
 paises_ordenados_por_nombre = sorted(countries, key=lambda x: x['name'])
-
 paises_ordenados_por_capital = sorted(countries, key=lambda x: x.get('capital', ''))
-
 paises_ordenados_por_poblacion = sorted(countries, key=lambda x: x['population'], reverse=True)
-
-
 diez_mas_poblados = paises_ordenados_por_poblacion[:10]
 
 
