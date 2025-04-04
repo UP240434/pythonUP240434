@@ -223,6 +223,32 @@ print(get_last_ten_countries())
 #Clasifique los diez países más poblados.
 print("           ")
 print('Programa 3.1')
-import countries as p
-data = p.ciudades
 
+from countries_data import data
+from countries_data import data
+
+
+print(sorted(data, key=lambda x: x['name']))
+print(sorted(data, key=lambda x: x['capital']))
+print(sorted(data, key=lambda x: x['population']))
+
+total_languages_initial = []
+for i in data:
+    total_languages_initial.extend(i["languages"])
+# noinspection DuplicatedCode
+counts = {}
+for i in total_languages_initial:
+    counts[i] = counts.get(i, 0) + 1
+
+
+def sort_dict_by_value(d, reverse=False):
+    return dict(sorted(d.items(), key=lambda x: x[1], reverse=reverse))
+
+
+counts = sort_dict_by_value(counts, True)
+final_dict_1 = {}
+for i in list(counts.items())[:10]:
+    final_dict_1[list(i)[0]] = list(i)[1]
+print(sorted(final_dict_1))
+
+print(list(sorted(data, key=lambda x: x['population'], reverse=True))[:10])

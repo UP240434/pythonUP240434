@@ -34,7 +34,7 @@ def rgb_color_gen():
     r = str(random.randint(0, 255))
     g = str(random.randint(0, 255))
     b = str(random.randint(0, 255))
-    return "(" + r + "," + g + "," + b + ")"
+    return "rgb(" + r + "," + g + "," + b + ")"
 print(rgb_color_gen())
 
 #Ejercicios: Nivel 2

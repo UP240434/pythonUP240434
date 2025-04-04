@@ -173,23 +173,16 @@ print(suma_de_numeros_pares(11))
 #Declare una función llamada evens_and_odds. Esta función toma un entero positivo como parámetro y cuenta el número de pares e impares en el número.
 print("           ")
 print('Programa 2.1')
-def evens_and_odds(n: int) -> tuple[int, int]:
-    pares = 0
-    impares = 0
-    
-    while n > 0:
-        digito = n % 10  
-        if digito % 2 == 0:
-            pares += 1
-        else:
-            impares += 1
-        n //= 10  
-    
-    return pares, impares
-
-par_cuenta, impar_cuenta = evens_and_odds(123456)
-print("Números pares:", par_cuenta)
-print("Números impares:", impar_cuenta)
+def even_and_odds (number):
+    odds = 0
+    even = 0
+    for i in range (0,number +1):
+        if i % 2 == 0:
+            even = even +1
+        else :
+            odds = odds + 1
+    return {"evens":even,"odds":odds}
+print(even_and_odds(number = 100))
 
 #Llama a tu función factorial, toma un número entero como parámetro y devuelve un factorial del número.
 print("           ")
@@ -219,46 +212,26 @@ is_empty("")
 #Escriba diferentes funciones que acepten listas. Estas funciones deben calcular la media, la mediana, la moda, el rango, la varianza y la desviación estándar (desviación estándar).
 print("           ")
 print('Programa 2.4')
-def mean(dataset):
-    return sum(dataset) / len(dataset)
-print(mean([1,2,3,4,5]))
-
-def median(dataset):
-    data = sorted(dataset)
-    index = len(data) // 2
-
-    if len(dataset) % 2 != 0:
-        return data[index]
-
-    return (data[index - 1] + data[index]) / 2
-print(median([1,2,3,4,5]))
-
-def mode(dataset):
-    frequency = {}
-
-    for value in dataset:
-        frequency[value] = frequency.get(value, 0) + 1
-
-    most_frequent = max(frequency.values())
-
-    modes = [key for key, value in frequency.items() if value == most_frequent]
-
-    return modes
-print(mode([1,2,3,4,5]))
-
-def variance(dataset):
-    n = len(dataset)
-    mean = sum(dataset) / n
-    deviations = [(x - mean) ** 2 for x in dataset]
-    variance = sum(deviations) / n
-    return variance
-print(variance([1,2,3,4,5]))
-
-def desv(dataset):
-    var = variance(dataset)
-    std_dev = var ** 0.5
-    return std_dev
-print(desv([1,2,3,4,5]))
+from statistics import median, median, mode, variance, stdev
+lista = [1, 2, 3, 4, 5]
+def calcular_media (lista):
+    return median(lista)
+def calcular_mediana (lista):
+    return median(lista)
+def calcular_moda (lista):
+    return mode(lista)
+def calcular_rango (lista):
+    return max(lista) - min(lista)
+def calcular_varianza (lista):
+    return variance(lista)
+def calcular_destiacion_estandar (lista):
+    return stdev(lista)
+print("Media:",calcular_media(lista))
+print("Mediana:",calcular_mediana(lista))
+print("Moae:",calcular_moda(lista))
+print("Rango:",calcular_rango(lista))
+print("Varianza:",calcular_varianza(lista))
+print("Desviacion estandar:",calcular_destiacion_estandar (lista))
 
 #Ejercicios: Nivel 3
 
@@ -293,10 +266,41 @@ print(mismo_type([1,2,3,4,5]))
 #Escriba una función que verifique si la variable proporcionada es una variable de Python válida
 print("           ")
 print('Programa 3.4')
+def valide_variable (variable):
+     if variable.isidentifier():
+         return True
+     else:
+         return False
+print('¿Es Valida?',valide_variable('Gael'))
+ 
 
 #Vaya a la carpeta de datos y acceda al archivo Countries-data.py.
 #Crea una función llamada "los idiomas más hablados del mundo". Debería devolver los 10 o 20 idiomas más hablados del mundo en orden descendente.
 ##Crea una función llamada "los países más poblados". Debería devolver los 10 o 20 países más poblados en orden descendente.
 print("           ")
 print('Programa 3.5')
+import countries_data as cd
+countrieslist = cd.countries
+total_languages = []
+for i in countrieslist:
+    total_languages.extend(i["languages"])
+cuenta = {}
+for i in total_languages:
+    cuenta[i] = cuenta.get(i, 0) + 1
 
+
+def los_mas(d, reverse=False):
+    return dict(sorted(d.items(), key=lambda x: x[1], reverse=reverse))
+print("           ")
+print('Los 20 idiomas mas hablados del mundo')
+cuenta = los_mas(cuenta, True)
+for i in list(cuenta.items())[:20]:
+    print(i)
+print("           ")
+print('Los 20 paises mas poblados del mundo')
+poblacion = {}
+for i in countrieslist:
+    poblacion[i["name"]] = i["population"]
+poblacion = los_mas(poblacion, True)
+for i in list(poblacion.items())[:20]:
+    print(i)

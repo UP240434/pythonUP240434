@@ -1,4 +1,4 @@
-ciudades = [
+data = [
     {
         "name": "Afghanistan",
         "capital": "Kabul",
