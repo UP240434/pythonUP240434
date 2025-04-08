@@ -60,3 +60,5 @@ print('Programa 7')
 equacion = lambda x1, y1, x2, y2: (y2 - y1) / (x2 - x1)
 y_interseccion = lambda x1, y1, x2, y2: y1 - equacion(x1, y1, x2, y2) * x1
 print(y_interseccion(1,2,3,4))
+
+print("revisado")

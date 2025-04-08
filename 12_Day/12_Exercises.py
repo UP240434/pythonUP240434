@@ -98,3 +98,4 @@ def siete_numeros():
             largo = len(lista)
     return lista
 print(siete_numeros())
+print("revisado")
